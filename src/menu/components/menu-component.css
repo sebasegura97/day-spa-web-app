@@ -1,0 +1,11 @@
+.MenuComponent{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  margin: 5vh auto 0 auto;
+  height: 10vh;
+  /* border-bottom: 1px solid white; */
+}

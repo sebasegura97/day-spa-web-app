@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+.HomeLayout {
+
+  display: flex;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-image: url('../../images/homeBg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.HomeLayout::after{
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../images/homeLayer.svg');
+  /* Rectangle Copy 2: */
+  /* background: radial-gradient(93% 33%, rgba(236,255,219,0.59) 0%, rgba(33,58,17,0.82) 65%); */
+  /* background-color: rgba(236,255,219,.6); */
+}
+
+/* Rectangle Copy 2: */

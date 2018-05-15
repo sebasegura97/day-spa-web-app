@@ -1,0 +1,50 @@
+
+.MenuTitle{
+  /* background-color: red; */
+  color: white;
+  margin: 0;
+  padding: 1em;
+  border-bottom: 1px solid white;
+  transition: .5s;
+  text-align: center;
+  width: 100%;
+}
+.MenuItem{
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  /* border-bottom: 1px solid white; */
+  /* width: 100%; */
+}
+.MenuHover{
+  z-index: 0;
+  visibility: hidden;
+  transition:  .5s;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.MenuHover p{
+  color: black;
+  padding: 1em;
+  background: white;
+  margin: 0;
+  width: 100%;
+}
+.MenuItem:hover .MenuHover{
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: blue;
+}
+
+.MenuItem:hover .MenuTitle {
+  border-bottom: 3px solid white;
+  /* transition: 1s; */
+
+}
