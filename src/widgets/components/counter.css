@@ -1,0 +1,15 @@
+.counterContainer{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.counterNumber{
+  color: #689F38;
+  margin: 0;
+}
+.counterText{
+  color: #689F38;
+  text-align: center;
+}

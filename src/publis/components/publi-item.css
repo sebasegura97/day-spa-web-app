@@ -1,0 +1,162 @@
+.publi{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 4;
+  /* align-self: start; */
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  margin-top: 20px;
+  position: relative;
+}
+
+.publi:hover{
+  cursor: pointer;
+}
+
+.publiContainer::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .8);
+  opacity: 0;
+  transition: .3s;
+
+}
+.publi:hover .publiContainer::after{
+  opacity: 1;
+  transition: .3s;
+}
+.publi:hover .buttonVer{
+  opacity: 1;
+  transition: .3s;
+  visibility: visible;
+}
+.buttonVer{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  height: 42px;
+  width: 50%;
+  font-size: 14pt;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #689F38;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  border: none;
+  box-shadow: -1px 2px 2px 1px rgba(0,0,0,.5);
+}
+.buttonVer:hover{
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: #333333;
+  transition: .3s;
+}
+
+.publiContainer{
+  background-color: white;
+  position: relative;
+  z-index: 3
+}
+.publiContainer img{
+  max-width: 100%;
+  height: auto;
+
+}
+.publiPromo{
+  will-change: transform;
+}
+.publi:hover .publiPromo{
+  animation: animationText 1s ease-in-out infinite;
+}
+
+.publi{
+  animation: fade .5s;
+  animation-timing-function: ease-in-out;
+}
+.publi::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: #333333;
+  opacity: 0;
+  will-change: opacity;
+  animation: cardEffect .3s;
+  background-image: url('../../../images/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* box-shadow: 3px 3px 3px 3px;  */
+  /* background-size: contain; */
+  /* border: 1px solid #333333; */
+}
+.fade{
+  position: absolute;
+}
+.fade-enter{
+  /* estado inicial de entrada*/
+
+}
+.fade-enter-active{
+  /* estado final de entrada*/
+}
+.fade-leave{
+  /* estado inicial de salida */
+  /* animation: fade 1s; */
+  /* transform: rotateY(360deg);
+  transition-duration: .3s; */
+  display: none;
+
+}
+.fade-leave-active{
+  display: none;
+}
+@keyframes cardEffect {
+  20%{ opacity: 1; }
+  40%{ opacity: 1; }
+}
+@keyframes fade {
+  40%{ transform: rotateY(120deg);}
+  /* 90%{ opacity: 1; } */
+}
+
+@keyframes animationText {
+  20%{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+  50%{
+    transform: scale(1.2);
+    color: #689F38;
+  }
+  80%{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+
+}
+@media only screen and (max-width: 580px) {
+  .publiTitle{
+    font-size: 20pt;
+    text-align: center;
+  }
+  .publiPromo{
+    font-size: 20px;
+    text-align: center;
+  }
+}

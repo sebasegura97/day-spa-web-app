@@ -1,0 +1,52 @@
+[debug] [2018-08-06T14:19:43.371Z] ----------------------------------------------------------------------
+[debug] [2018-08-06T14:19:43.372Z] Command:       /usr/local/Cellar/node/10.4.1/bin/node /usr/local/bin/firebase serve
+[debug] [2018-08-06T14:19:43.372Z] CLI Version:   4.0.0
+[debug] [2018-08-06T14:19:43.372Z] Platform:      darwin
+[debug] [2018-08-06T14:19:43.372Z] Node Version:  v10.4.1
+[debug] [2018-08-06T14:19:43.480Z] Time:          Mon Aug 06 2018 11:19:43 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:43.480Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-06T14:19:43.522Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-06T14:19:43.522Z] > authorizing via signed-in user
+[debug] [2018-08-06T14:19:43.523Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-08-06T14:19:43.523Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/RCS7NnXInqmisiEsqC8vZ0qEPnbgHcxEPtrUl2aLsQ4',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Aug 06 2018 11:19:43 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:43.974Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-06T14:19:44.010Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/dayspa-177318  
+  
+ Mon Aug 06 2018 11:19:44 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:45.261Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-06T14:19:45.262Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/dayspa-177318/tokens  
+  
+ Mon Aug 06 2018 11:19:45 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:46.135Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-06T14:19:46.135Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/dayspa-177318  
+  
+ Mon Aug 06 2018 11:19:46 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:47.392Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/sebastian/Documents/GitHub/day-spa-react/react-web-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-08-06T14:19:51.480Z] Fetching environment
+[debug] [2018-08-06T14:19:51.493Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/789199762300:getServerAppConfig  
+  
+ Mon Aug 06 2018 11:19:51 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:51.493Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/789199762300/clients/_:getWebAppConfig  
+  
+ Mon Aug 06 2018 11:19:51 GMT-0300 (Argentina Standard Time)
+[debug] [2018-08-06T14:19:52.013Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-06T14:19:52.174Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-06T14:19:52.174Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: ./dist
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-08-06T14:19:54.812Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.

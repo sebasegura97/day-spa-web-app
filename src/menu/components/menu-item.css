@@ -1,50 +1,108 @@
 
-.MenuTitle{
-  /* background-color: red; */
-  color: white;
-  margin: 0;
-  padding: 1em;
-  border-bottom: 1px solid white;
-  transition: .5s;
-  text-align: center;
-  width: 100%;
-}
 .MenuItem{
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  cursor: pointer;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1em;
   position: relative;
   /* border-bottom: 1px solid white; */
-  /* width: 100%; */
 }
+
+.MenuItem a{
+  grid-row: 2/3;
+}
+.MenuItem:hover{
+  cursor: pointer;
+}
+
+.MenuItem:hover .MenuTitle{
+  will-change: border-bottom;
+  transform: scale(1.2);
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  transition: .3s;
+}
+
+.MenuTitle{
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16pt;
+}
+
+
 .MenuHover{
-  z-index: 0;
+  grid-row: 3/4;
   visibility: hidden;
   transition:  .5s;
   width: 100%;
   position: absolute;
+  will-change: opacity, transform;
   opacity: 0;
   transform: translateY(-100px);
 }
+
+
 .MenuHover p{
   color: black;
   padding: 1em;
   background: white;
   margin: 0;
+  font-weight: 100;
+  font-size: 16pt;
   width: 100%;
+  transition: .3s;
+  /* border-bottom: 1px solid black; */
+}
+.MenuHover p:hover{
+  background-color: #689F38;
+  color: white;
+
 }
 .MenuItem:hover .MenuHover{
   visibility: visible;
+  /* display: flex; */
   cursor: pointer;
   opacity: 1;
-  transform: translateY(0);
-  background-color: blue;
+  transform: translateY(30px);
 }
-
-.MenuItem:hover .MenuTitle {
-  border-bottom: 3px solid white;
-  /* transition: 1s; */
-
+@media only screen and (max-width: 882px) {
+  .MenuTitle{
+    font-size: 14pt;
+  }
+  .MenuItem{
+    display: block;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .MenuTabs:first-child{
+    margin-top: 20px;
+  }
+  .MenuTabs{
+    width: 40vw;
+  }
+  .MenuHover{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    transform: none;
+    transform: scaleY(0);
+    margin-top: 15px;
+  }
+  .MenuHover p{
+    padding: 0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .MenuItem:hover .MenuHover{
+    transform: none;
+    position: relative;
+  }
+  .MenuItem:hover .MenuTitle{
+    border: none;
+    /* transform: none; */
+    padding: 0;
+  }
 }

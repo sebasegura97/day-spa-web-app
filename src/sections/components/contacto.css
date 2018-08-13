@@ -1,0 +1,107 @@
+.contactoContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 200px 200px;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  justify-items: center;
+  background-image: url('../../../images/contactoBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.sectionContacto{
+  grid-row: 1/2;
+  grid-column: 1/2;
+  position: relative;
+  z-index: 3;
+  transform: translateX(-100vw);
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: 1s;
+}
+
+.contactoText{
+  text-align: center;
+  grid-row: 2/3;
+  color: white;
+  grid-column: 1/2;
+  position: relative;
+  z-index: 3;
+  font-size: 16pt;
+  width: 70%;
+  line-height: 2;
+  font-weight: 100;
+  transform: translateX(100vw);
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: 1s;
+
+}
+.contactoIcon{
+  font-size: 48pt;
+  color: white;
+  margin: auto;
+
+
+}
+.contactoIcon:hover{
+  cursor: pointer;
+}
+.iconContainer{
+  grid-row: 3/4;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 80px;
+  transform: scale(0);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: 1s;
+}
+.contactoLayer{
+  grid-row: 1/4;
+  grid-column: 1/2;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 58, 17, .82)
+}
+.contactoAncla{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contactoAncla{
+  text-align: center;
+}
+
+.animate{
+  /* transition: 1s; */
+  transform: translateX(0);
+  opacity: 1;
+}
+.animatePop{
+  transform: scale(1);
+  opacity: 1;
+}
+@media only screen and (max-width: 882px) {
+  .contactoContainer{
+    grid-template-rows: 200px 150px 600px;
+  }
+  .iconContainer{
+    flex-direction:  column;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+}

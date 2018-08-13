@@ -1,0 +1,40 @@
+.publisContainer{
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 1fr 30px;
+  grid-auto-flow: row;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  grid-gap: 15px;
+  align-self: start;
+  justify-items: center;
+  z-index: 3;
+  animation: publi 2s;
+  animation-timing-function: ease-in;
+
+}
+
+
+@keyframes publi {
+  0%{
+    transform: translateX(100vw);
+  }
+  80%{
+    transform: translate(-5vw);
+  }
+
+}
+
+@media only screen and (max-width: 882px) {
+  .publisContainer{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .publisContainer{
+    display: flex;
+    flex-direction:  column;
+  }
+  
+}

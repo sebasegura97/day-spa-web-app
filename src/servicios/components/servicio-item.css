@@ -1,0 +1,44 @@
+.servicioItem{
+  border: 1px solid #689F38;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -3px 3px 6px 1px rgba(0,0,0,.3);
+  transition: .3s;
+  /* max-width: 250px;
+  min-width: 150px; */
+}
+.servicioItem:hover{
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: none;
+  transform: scale(1.1);
+}
+.servicioItem:hover .verMas{
+  transform: scale(1.1);
+  transition: .3s;
+}
+.servicioTitle{
+  background-color: #689F38;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 16pt;
+  text-align: center;
+}
+.servicioDescription{
+  padding: 5px 10px;
+  color: #333333;
+}
+.verMas{
+  margin: auto;
+  margin-bottom: 10px;
+  border: none;
+  font-size: 12pt;
+  font-weight: 300;
+  font-family: Montserrat;
+  color: #689F38;
+  align-self: flex-end;
+}
+.verMas::after{
+  content: ""
+}

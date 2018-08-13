@@ -34,12 +34,11 @@ module.exports = {
           use: ['style-loader', 'css-loader']
         },
         {
-          test: /\.(png|jpg|gif|svg|woff)$/,
+          test: /\.(png|jpg|gif|svg|woff|otf)$/,
           use: {
             loader: 'url-loader',
             options:  {
-              limit: 10000000,
-              fallback: 'file-loader',
+              limit: 100000000,
               name: 'images/[name].[hash].[ext]'
             }
           }

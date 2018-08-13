@@ -1,0 +1,20 @@
+.selectorContainer{
+  display: flex;
+  margin-top: 20px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.selector{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  z-index: 3;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.selected{
+  background-color: white;
+  transition: .3s;
+}

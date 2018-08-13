@@ -1,0 +1,36 @@
+.elegirnosContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-bottom: 80px;
+
+}
+.title{
+  transform: translate(100vw);
+  will-change: transform, opacity;
+  transition: 1s;
+}
+.elegirnosText{
+  width: 70%;
+  text-align: center;
+  margin-top: 40px;
+  transform: translate(-100vw);
+  will-change: transform, opacity;
+  transition: 1s;
+}
+.counters{
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 20px;
+  grid-auto-flow: column;
+  transform: translate(100vw);
+  will-change: transform, opacity;
+  transition: 1s;
+}
+
+@media only screen and (max-width: 882px) {
+  .counters{
+    grid-auto-flow: row;
+  }
+}

@@ -1,0 +1,34 @@
+.servicios{
+  margin-bottom: 10vh;
+}
+.serviciosContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  margin-bottom: 15vh;
+  transform: scale(0);
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.titleServicios{
+  transform: translate(-100vw);
+  transition: 1s;
+  will-change: transform;
+}
+.animationIn{
+  transform: scale(1);
+  opacity: 1;
+  transition: 1s;
+  transition-delay: .3s;
+}
+
+@media only screen and (max-width: 882px) {
+  .serviciosContainer{
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    margin: 0;
+  }
+}

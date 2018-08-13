@@ -1,0 +1,33 @@
+.portada{
+  display: grid;
+  grid-template-columns: minmax(250px, .4fr) 1fr;
+  grid-template-rows: 200px 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  /* min-height: 100vh; */
+  background-size: cover;
+  background-image: url('../../../images/homeBg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+}
+
+@media only screen and (max-width: 882px) {
+    .portada{
+      grid-template-columns: 1fr;
+      grid-template-rows: 200px 100px 1fr;
+      background-size: cover;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .portada{
+      grid-template-columns: 1fr;
+      grid-template-rows: 200px 1fr;
+      background-size: cover;
+      position: relative;
+    }
+}

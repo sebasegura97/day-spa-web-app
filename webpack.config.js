@@ -65,16 +65,17 @@ module.exports = (env) => {
             })
           },
           {
-            test: /\.(png|jpg|gif|svg|woff)$/,
+
+            test: /\.(png|jpg|gif|svg|woff|otf)$/,
             use: {
               loader: 'url-loader',
               options:  {
-                limit: 10000,
-                fallback: 'file-loader',
-                name: 'images/[name].[hash].[ext]'
+                limit: 100000000,
+                name: './images/[name].[hash].[ext]'
               }
             }
-          }
+          },
+
         ]
       },
 
