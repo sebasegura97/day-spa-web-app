@@ -9,7 +9,12 @@ import Tecnologia from '../../sections/components/tecnologia'
 import Elegirnos from '../../sections/components/elegirnos'
 import Contacto from '../../sections/components/contacto'
 import SignIn from '../../widgets/components/sign-in'
-import firebase from 'firebase'
+import UploadFile from '../../widgets/containers/upload.js'
+import ImageGallery from '../../widgets/containers/image-gallery'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'babel-polyfill'
+
 
 // Conexion con firebase:
 var config = {
@@ -35,7 +40,7 @@ class Home extends Component {
   };
 
   // Listen to the Firebase Auth state and set the local state.
-  componentDidMount() {
+  async componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
         (user) => {
           // if no user, we can't acces user data (obviusly)
@@ -72,9 +77,10 @@ class Home extends Component {
           this.setState({
             isSignedIn: user,
           })
-        }
+        }      
     );
-  }
+  
+}
 
   signInClick = () => {
     // if is signed in, sign out
@@ -120,6 +126,9 @@ class Home extends Component {
         <Tecnologia />
         <Elegirnos />
         <Contacto />
+        <UploadFile />
+        <ImageGallery />
+
       </HomeLayout>
     )
   }

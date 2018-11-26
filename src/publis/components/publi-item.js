@@ -3,7 +3,8 @@ import './publi-item.css'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 
-function PubliItem(props, state){
+function PubliItem(props){
+  
   return(
     <CSSTransitionGroup
       transitionName="fade"
@@ -12,14 +13,14 @@ function PubliItem(props, state){
     >
       <div
         className="publi"
-        key={props.publi.image}
+        key={props.current}
 
       >
         <h2 className="publiTitle">{props.publi.title}</h2>
         <div className="publiContainer">
 
           <img
-            src={props.publi.image}
+            src={props.publi.downloadURL}
             className="publiImage"
           >
           </img>
@@ -27,7 +28,7 @@ function PubliItem(props, state){
 
 
         </div>
-        <h1 className="publiPromo">{props.publi.promo}</h1>
+        <h1 className="publiPromo">{props.publi.discount}</h1>
       </div>
     </CSSTransitionGroup>
   )
